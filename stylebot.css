@@ -652,7 +652,7 @@
     transition: height .2s ease-in-out, opacity .2s ease-in-out;
     bottom: 120%;
     right: 0;
-    width: 400px; /* Updated width */
+    width: 380px; /* Updated width */
     height: var(--fabio-height, 0);
     position: absolute;
     border-radius: 16px;
