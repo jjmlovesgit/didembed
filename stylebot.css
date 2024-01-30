@@ -19,7 +19,8 @@
     --did-primary-800: #ffb13a;
     --did-primary-900: #ff882e;
     --did-primary-950: #ed7921;
-    --did-primary-main: #ff882e;
+    /* --did-primary-main: #ff882e; */
+    --did-primary-main: #2e58ff;
     --did-primary-bg: #ff882e1f;
     --did-primary-bgDark: #493021;
     --did-primary-hover: #ed7921;
