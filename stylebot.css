@@ -23,7 +23,8 @@
     --did-primary-main: #2e58ff;
     --did-primary-bg: #ff882e1f;
     --did-primary-bgDark: #493021;
-    --did-primary-hover: #ed7921;
+    /* --did-primary-hover: #ed7921;*/
+     --did-primary-hover: #3d85c6;
     /* --did-primary-hover: #3d85c6; */
     --did-primary-disabled: #94979c;
     --did-secondary-50: #f8f5f4;
