@@ -7,21 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
-    
-<!-- William Harris embed code Start -->    
-
-<script
-    type="module"
-    src="https://agent.d-id.com/v1/index.js"
-    data-name="did-agent"
-    data-mode="fabio"
-    data-client-key="Z29vZ2xlLW9hdXRoMnwxMDMwNjM2MTU0MTU2MjU0MzIzMjI6TjRQekI1ZmlzZUdEN1VhZzVmSUd1"
-    data-agent-id="agt_uMSAbzj_">
-</script>
- 
-<!-- William Harris embed code End-->  
-        
+           
   <body>
     <nav id="desktop-nav">
       <div class="logo2">
@@ -60,10 +48,10 @@
     </nav>
     <section id="profile">
     <div class="section__pic-container">
-      <img src="./assets/profile-pic-3.png" alt="William Harris profile picture" class="about-pic"/>
+      <img src="assets/property__casualty.png" alt="William Harris profile picture" class="about-pic"/>
     </div>
     <div class="section__text">
-      <p class="section__text__p1">Hello I'm</p>
+      <p class="section__text__p1">Welcome to... </p>
       <h1 class="title">William Harris</h1>
       <p class="section__text__p2">Park Insurance & Brokerage™ Agent</p>
       <p class="section__text__p2">Auto | Home | Life</p>
@@ -74,7 +62,7 @@
       <div id="socials-container">
         <img src="./assets/SMlogos.png" alt="My LinkedIn profile" class="icon"/>
       </div>
-      <!--- Link to open n a new tab --->
+      <!--- Link to open a new tab --->
       <a href="./FAQ.html" target="_blank" class="pdf-button">Open FAQ</a>
     </div>
     </section>
@@ -372,5 +360,17 @@
       <p>Copyright &#169; 2023 William Harris. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+
+    <!-- Your web page content here -->
+    <button id="show-iframe-btn" class="open-floating-btn">
+      <span>AI Agent</span>
+    </button>
+    <button id="close-agent-btn" class="close-floating-btn" style="display: none;">Close agent</button>
+    <!-- iframe initially hidden -->
+    <iframe id="agent-iframe" src="https://studio.d-id.com/agents/share?id=agt_uMSAbzj_&amp;key=WjI5dloyeGxMVzloZFhSb01ud3hNRE13TmpNMk1UVTBNVFUyTWpVME16SXpNakk2VGpSUWVrSTFabWx6WlVkRU4xVmhaelZtU1VkMQ" frameborder="0" width="410" height="600" allow="microphone" style="position: fixed; border-radius: 10px; bottom: 10px; right: 10px; display: none;"></iframe>
+    <div id="footer-cover" style="display: none;"></div> 
+    <script src="script_agent.js"></script>
+    <script src="iframe-control.js"></script> 
+
   </body>
 </html>

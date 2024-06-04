@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+
+    <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>My Portfolio</title>
+          <link rel="stylesheet" href="style.css" />
+          <link rel="stylesheet" href="styles.css" />
+          <link rel="stylesheet" href="mediaqueries.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>William Harris Agency</title>
     <style>
@@ -158,6 +168,17 @@
             <p>To join in making mindful choices today for a vibrant, healthy tomorrow, embracing a life where health is a joyful exploration.</p>
         </div>
     </div>
+   
+    <!-- Your web page content here -->
+    <button id="show-iframe-btn" class="open-floating-btn">
+        <span>AI Agent</span>
+      </button>
+      <button id="close-agent-btn" class="close-floating-btn" style="display: none;">Close agent</button>
+      <!-- iframe initially hidden -->
+      <iframe id="agent-iframe" src="https://studio.d-id.com/agents/share?id=agt_uMSAbzj_&amp;key=WjI5dloyeGxMVzloZFhSb01ud3hNRE13TmpNMk1UVTBNVFUyTWpVME16SXpNakk2VGpSUWVrSTFabWx6WlVkRU4xVmhaelZtU1VkMQ" frameborder="0" width="410" height="600" allow="microphone" style="position: fixed; border-radius: 10px; bottom: 10px; right: 10px; display: none;"></iframe>
+      <div id="footer-cover" style="display: none;"></div> 
+      <script src="script_agent.js"></script>
+      <script src="iframe-control.js"></script> 
 
 </body>
 </html>
