@@ -67,6 +67,6 @@
     right: 0;
     background-color: white; /* Change as needed - covers D-ID logo*/
     width: 100%;
-    height: 100px; /* Adjust according to your needs */
+    height: 75px; /* Adjust according to your needs */
     display: none; /* Initially hidden */
 }
