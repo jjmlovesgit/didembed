@@ -22,7 +22,7 @@ document.getElementById('close-agent-btn').addEventListener('click', function() 
 
   // Prepare the iframe with the new agent ID but do not display it yet
   const iframe = document.getElementById('agent-iframe');
-  iframe.src = `https://studio.d-id.com/agents/share?id=${agentIds[currentPage - 1]}&key=WVhWMGFEQjhOalZpWmpJNE5tTTNZMkkwTVRCa1ltRmhZbUprTTJKbU9tTlRWbmQwTm1neGQxOVZRWGx0TjA1dldIZHpWZz09`;
+  iframe.src = `https://studio.d-id.com/agents/share?id=${agentIds[currentPage - 1]}&key=WjI5dloyeGxMVzloZFhSb01ud3hNRE13TmpNMk1UVTBNVFUyTWpVME16SXpNakk2VGpSUWVrSTFabWx6WlVkRU4xVmhaelZtU1VkMQ`;
 
   // Keep the iframe hidden initially for the next page until the button is clicked again
   iframe.style.display = 'none';
