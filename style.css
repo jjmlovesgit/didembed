@@ -449,4 +449,79 @@ footer p {
   text-align: center;
 }
 
-/* did section */
+/* faq section */
+#myBtn {
+  display: inline-block;
+  background-color: #007bff; /* Blue background color */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding around text */
+  text-align: center; /* Center-align text */
+  text-decoration: none; /* No underline */
+  font-size: 16px; /* Text size */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 20px; /* Top margin for spacing */
+  border: none; /* No border by default */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth color and transform transitions */
+}
+
+#myBtn:hover, #myBtn:focus {
+  background-color: #0056b3; /* Darker blue on hover/focus */
+  transform: scale(1.05); /* Slightly increase size on hover/focus */
+  outline: none; /* Remove outline on focus for cleaner look */
+}
+
+
+/* Modal Content *//* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top of other elements */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 10% auto; /* 10% from the top and centered horizontally */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0} 
+  to {top: 0; opacity: 1}
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#agent-iframe {
+  transform: scale(1.0); /* Scale down the content to 80% of its original size */
+  transform-origin: top left; /* Sets the origin of transformation */
+}
+

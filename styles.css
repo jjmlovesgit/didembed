@@ -1,5 +1,6 @@
 .open-floating-btn {
-    background-image: url('assets/WH3.gif');
+    /* background-image: url('https://raw.githubusercontent.com/jjmlovesgit/didembed/main/assets/WH3.gif'); */
+    background-image: url('./assets/WH4.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -40,12 +41,13 @@
 
 .close-floating-btn {
     position: fixed;
-    bottom: 610px;
+    bottom: 612px;
     right: 140px;
     background-color: #433dff;
+    background-color: #007bff; /* Blue background color */
     color: white;
     border: none;
-    border-radius: 2%;
+    border-radius: 5px; /* Rounded corners */
     width: 140px; /* Set width to 100px */
     height: 30px; /* Set height to 40px */
     font-size: 18px;

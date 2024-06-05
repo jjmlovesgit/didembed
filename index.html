@@ -30,7 +30,7 @@
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">Harris Agency, Inc.</div>
+      <h1 div="class="logo">The Harris Agency, Inc.</h1>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -60,9 +60,17 @@
       </div>
       <div id="socials-container">
         <img src="./assets/SMlogos.png" alt="My LinkedIn profile" class="icon"/>
+      </div>    
+      <!-- Trigger/Open The Modal -->
+      <button id="myBtn">Open FAQ</button>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <iframe src="./FAQ.html" frameborder="0" width="100%" height="600px"></iframe>
+        </div>
       </div>
-      <!--- Link to open a new tab --->
-      <a href="./FAQ.html" target="_blank" class="pdf-button">Open FAQ</a>
     </div>
     </section>
     <section id="about">
@@ -360,12 +368,56 @@
     </footer>
     <script src="script.js"></script>
 
-    <!-- Your web page content here -->
-    <button id="show-iframe-btn" class="open-floating-btn">
-      <span>AI Agent</span>
-    </button>
+  <script>
+  // Logic to ensure FAQ and Agent do not conflict and overlap
+    document.addEventListener('DOMContentLoaded', function() {
+        var modal = document.getElementById("myModal");
+        var btnFAQ = document.getElementById("myBtn");
+        var spanCloseFAQ = document.getElementsByClassName("close")[0];
+        var agentButton = document.getElementById('show-iframe-btn');
+        var agentIframe = document.getElementById('agent-iframe');
+        var agentCloseButton = document.getElementById('close-agent-btn');
+
+      // Function to open FAQ and ensure the agent iframe is hidden
+      btnFAQ.onclick = function() {
+          modal.style.display = "block";
+          agentIframe.style.display = "none"; // Hide the agent iframe when FAQ is opened
+          agentButton.style.display = 'block'; // Ensure the agent button is visible
+          agentCloseButton.style.display = 'none'; // Hide the close button for the agent
+      };
+
+      // Function to close the FAQ modal
+      spanCloseFAQ.onclick = function() {
+          modal.style.display = "none";
+      };
+
+      // Close FAQ modal when clicking outside of it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      };
+
+      // Function to manage agent iframe display and close FAQ if open
+      agentButton.onclick = function() {
+          agentIframe.style.display = "block";
+          modal.style.display = "none"; // Close FAQ when opening the agent iframe
+          agentCloseButton.style.display = 'block'; // Show the agent close button
+          this.style.display = 'none'; // Hide the open button for the agent
+      };
+
+      // Close the agent iframe and ensure its button toggles correctly
+      agentCloseButton.onclick = function() {
+          agentIframe.style.display = "none";
+          agentButton.style.display = 'block';
+          this.style.display = 'none';
+      };
+    });
+  </script>
+     
+    <!-- D-id Agent content here -->
+    <button id="show-iframe-btn" class="open-floating-btn"></button>
     <button id="close-agent-btn" class="close-floating-btn" style="display: none;">Close agent</button>
-    <!-- iframe initially hidden -->
     <iframe id="agent-iframe" src="https://studio.d-id.com/agents/share?id=agt_uMSAbzj_&amp;key=WjI5dloyeGxMVzloZFhSb01ud3hNRE13TmpNMk1UVTBNVFUyTWpVME16SXpNakk2VGpSUWVrSTFabWx6WlVkRU4xVmhaelZtU1VkMQ" frameborder="0" width="410" height="600" allow="microphone" style="position: fixed; border-radius: 10px; bottom: 10px; right: 10px; display: none;"></iframe>
     <div id="footer-cover" style="display: none;"></div> 
     <script src="script_agent.js"></script>
