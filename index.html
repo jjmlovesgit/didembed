@@ -414,7 +414,14 @@
       };
     });
   </script>
-     
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector(".menu-links");
+      const icon = document.querySelector(".hamburger-icon");
+      menu.classList.toggle("open");
+      icon.classList.toggle("open");
+    }
+  </script>    
     <!-- D-id Agent content here -->
     <button id="show-iframe-btn" class="open-floating-btn"></button>
     <button id="close-agent-btn" class="close-floating-btn" style="display: none;">Close agent</button>
