@@ -366,6 +366,7 @@
       <p>Copyright &#169; 2023 William Harris. All Rights Reserved.</p>
     </footer>
   
+
     <script>
     function toggleMenu() {
       const menu = document.querySelector(".menu-links");
@@ -422,13 +423,36 @@
     });
     </script>
      
-    <!-- D-id Agent content here -->
+    <!-- D-id Agent Iframe Button Controls -->
     <button id="show-iframe-btn" class="open-floating-btn"></button>
     <button id="close-agent-btn" class="close-floating-btn" style="display: none;">Close agent</button>
     <iframe id="agent-iframe" src="https://studio.d-id.com/agents/share?id=agt_uMSAbzj_&amp;key=WjI5dloyeGxMVzloZFhSb01ud3hNRE13TmpNMk1UVTBNVFUyTWpVME16SXpNakk2VGpSUWVrSTFabWx6WlVkRU4xVmhaelZtU1VkMQ" frameborder="0" width="410" height="600" allow="microphone" style="position: fixed; border-radius: 10px; bottom: 10px; right: 10px; display: none;"></iframe>
     <div id="footer-cover" style="display: none;"></div> 
-    <script src="iframe-control.js"></script> 
+    <script>
+      
+    // JavaScript to control showing and hiding the iframe
+      document.addEventListener('DOMContentLoaded', function() {
+          var showButton = document.getElementById('show-iframe-btn');
+          var closeButton = document.getElementById('close-agent-btn');
+          var iframe = document.getElementById('agent-iframe');
+          var footerCover = document.getElementById('footer-cover');
 
+          showButton.addEventListener('click', function() {
+              iframe.style.display = 'block'; // Show the iframe
+              closeButton.style.display = 'block'; // Show the close button
+              footerCover.style.display = 'block'; // Show the footer cover
+              this.style.display = 'none'; // Hide the show button
+          });
+
+          closeButton.addEventListener('click', function() {
+              iframe.style.display = 'none'; // Hide the iframe
+              footerCover.style.display = 'none'; // Hide the footer cover
+              showButton.style.display = 'block'; // Show the show button
+              this.style.display = 'none'; // Ensure the close button is hidden
+          });
+      });
+    </script> 
   </body>
 </html>
+
 
