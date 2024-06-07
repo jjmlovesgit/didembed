@@ -527,14 +527,14 @@ footer p {
 
 /* Sets the iframe */
 .open-floating-btn {
-    background-image: url('https://raw.githubusercontent.com/jjmlovesgit/didembed/main/assets/WH4.gif'); 
+    background-image: url('https://raw.githubusercontent.com/jjmlovesgit/didembed/main/assets/WH6.gif'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #000000; /* Fills any unfilled area with black */
     border: none;
     border-radius: 5px;
-    width: 95px;
+    width: 140px;
     height: 140px;
     display: flex;
     flex-direction: column;
@@ -546,8 +546,6 @@ footer p {
     right: 10px;
     color: rgb(255, 255, 255);
     font-size: 15px;
-    padding: 10px 10px 5px 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     z-index: 1000;
     overflow: hidden;
 }
