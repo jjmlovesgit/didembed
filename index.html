@@ -364,9 +364,7 @@
       </nav>
       <p>Copyright &#169; 2023 John Harris. All Rights Reserved.</p>
     </footer>
-
-    // Logic to ensure FAQ and Agent do not conflict and overlap
-    
+  
     <script>
     function toggleMenu() {
       const menu = document.querySelector(".menu-links");
@@ -406,7 +404,7 @@
           }
       };
 
-      // Function to manage agent iframe display and close FAQ if open
+      // ************************ Functionality Section to manage agent iframe display ***************************
       agentButton.onclick = function() {
           agentIframe.style.display = "block";
           modal.style.display = "none"; // Close FAQ when opening the agent iframe
@@ -423,14 +421,14 @@
     });
     </script>
      
-    <!-- D-id Agent Iframe Button Controls -->
+    <!-- D-id Agent Iframe Button set up to open and close Agent -->
     <button id="show-iframe-btn" class="open-floating-btn"></button>
     <button id="close-agent-btn" class="close-floating-btn" style="display: none;">Close agent</button>
     <iframe id="agent-iframe" src="https://studio.d-id.com/agents/share?id=agt_EkAZcyRl&amp;key=WjI5dloyeGxMVzloZFhSb01ud3hNRGc1TWpjek5EQTBNRFV6TmpNMk56TTVPVEk2U25wYWQxTldNRlZhVjJvNFFUVlpSbFl6WXpabQ" frameborder="0" width="410" height="600" allow="microphone" style="position: fixed; border-radius: 10px; bottom: 10px; right: 10px; display: none;"></iframe>
     <div id="footer-cover" style="display: none;"></div> 
+
     <script>
-      
-    // JavaScript to control showing and hiding the iframe
+    // JavaScript to control launch and shutdown of Agent in the iframe window 
       document.addEventListener('DOMContentLoaded', function() {
           var showButton = document.getElementById('show-iframe-btn');
           var closeButton = document.getElementById('close-agent-btn');
@@ -452,5 +450,6 @@
           });
       });
     </script> 
+
   </body>
 </html>
