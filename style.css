@@ -587,46 +587,33 @@ footer p {
     border-radius: 8px; /* Rounded corners */
 }
 
-
-/* Keyframes for scrolling text animation */
-@keyframes scroll-text {
-  0% {#footer-cover {
-    position: fixed;
-    bottom: 10px; /* Same as the iframe */
-    right: 10px; /* Same as the iframe */
-    width: 390px; /* Same as the iframe to match width */
-    height: 40px; /* Height as needed */
-    background-color: black; /* Black background color */
-    overflow: hidden; /* Hide overflow to maintain the clean look */
-    border-bottom-left-radius: 10px; /* Rounded bottom left corner */
-    border-bottom-right-radius: 10px; /* Rounded bottom right corner */
-    display: flex; /* Use flex to center the text vertically and horizontally */
-    align-items: center; /* Center the text vertically */
-    justify-content: center; /* Center the text horizontally */
-    text-align: center; /* Ensure text is centered if it doesn't need to scroll */
-    color: white; /* Text color set to white */
-  }
-   
-  /* Keyframes for scrolling text animation */
-  @keyframes scroll-text {
-    0% {
-      transform: translateX(100%);
-    }
-    80% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(0); /* Stops moving and stays in place */
-    }
-  }
-  
-    transform: translateX(100%);
-  }
-  80% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(0); /* Stops moving and stays in place */
-  }
+#footer-cover {
+  position: fixed;
+  bottom: 10px; /* Same as the iframe */
+  right: 10px; /* Same as the iframe */
+  width: 390px; /* Same as the iframe to match width */
+  height: 27px; /* Height as needed */
+  background-color: black; /* Black background color */
+  overflow: hidden; /* Hide overflow to maintain the clean look */
+  border-bottom-left-radius: 10px; /* Rounded bottom left corner */
+  border-bottom-right-radius: 10px; /* Rounded bottom right corner */
+  display: none; /* Initially hidden, shown when needed */
+  align-items: center; /* Center the text vertically */
+  justify-content: center; /* Center the text horizontally */
+  text-align: center; /* Ensure text is centered if it doesn't need to scroll */
+  color: white; /* Text color set to white */
+}
+.scrolling-text {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: scroll-text 10s linear; /* Removed 'infinite' */
 }
 
+@keyframes scroll-text {
+  from {
+    transform: translateX(100%); /* Start from fully right */
+  }
+  to {
+    transform: translateX(-100%); /* End fully left */
+  }
+}
