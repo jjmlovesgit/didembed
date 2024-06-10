@@ -606,7 +606,6 @@ footer p {
 .scrolling-text {
   overflow: hidden;
   white-space: nowrap;
-  animation: scroll-text 10s linear; /* Removed 'infinite' */
 }
 
 @keyframes scroll-text {
