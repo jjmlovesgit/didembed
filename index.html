@@ -72,7 +72,7 @@
     </div>
     </section>
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
+      <p class="section__text__p1">Get to know us...</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container">
@@ -404,7 +404,7 @@
           }
       };
 
-      // ************************ Functionality Section to manage agent iframe display ***************************
+      // Functionality Section to manage agent iframe display 
       agentButton.onclick = function() {
           agentIframe.style.display = "block";
           modal.style.display = "none"; // Close FAQ when opening the agent iframe
@@ -421,15 +421,22 @@
     });
     </script>
      
-<!-- D-id Agent - First create and use your own gif file and place it into assets folder -->
-    <button id="show-iframe-btn" class="open-floating-btn" style="background-image: url('https://raw.githubusercontent.com/jjmlovesgit/didembed/main/assets/Agentgif.gif'); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: #000000; border: none; border-radius: 5px; width: 140px; height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; cursor: pointer; position: fixed; bottom: 10px; right: 10px; color: rgb(255, 255, 255); font-size: 15px; z-index: 1000; overflow: hidden;"></button>   
+<!--- ************ -- Make Changes Here!............. D-id Agent Set up ************ -->
+
+    <!-- Step 1: Greate your own gif and use that for your agent - upload top assets directory -->
+    <button id="show-iframe-btn" class="open-floating-btn" style="background-image: url('assets/Agent.gif'); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: transparent; border: none; border-radius: 5px; width: 140px; height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; cursor: pointer; position: fixed; bottom: 10px; right: 10px; color: rgb(255, 255, 255); font-size: 15px; z-index: 1000; overflow: hidden;"></button>   
     <button id="close-agent-btn" class="close-floating-btn" style="display: none;">Close agent</button>
-    <!-- D-id Agent ID and Key --- Second - IMPORTANT Replace scr= with you agent "link" from D-id -->
-    <iframe id="agent-iframe" src="https://tinyurl.com/yhn4eswy" frameborder="0" width="390" height="600" allow="microphone" style="position: fixed; border-radius: 10px; bottom: 10px; right: 10px; display: none;"></iframe>
+
+    <!-- Step 2: Change this Agent and Key using yours from your agent creations at D-ID in the Creative Reality Studio per How to Video -->
+    <iframe id="agent-iframe" src="https://studio.d-id.com/agents/share?id=agt_EkAZcyRl&key=WjI5dloyeGxMVzloZFhSb01ud3hNRGc1TWpjek5EQTBNRFV6TmpNMk56TTVPVEk2U25wYWQxTldNRlZhVjJvNFFUVlpSbFl6WXpabQ==" frameborder="0" width="390" height="600" allow="microphone" style="position: fixed; border-radius: 10px; bottom: 10px; right: 10px; display: none;"></iframe>
     <!--  <div id="footer-cover" style="display: none;"></div>  -->
+
+     <!-- Step 3: Chnage this footer text as required if you like -->
     <div id="footer-cover">
       <div class="scrolling-text">Please type or use the "Mic" for questions..."</div>
     </div>
+
+<!--- ************ -- No  other changes required ..... D-id Agent Set up ************ -->
 
     <script>
     // JavaScript to control launch and shutdown of Agent in the iframe window 
@@ -454,6 +461,5 @@
           });
       });
     </script> 
-
   </body>
 </html>
