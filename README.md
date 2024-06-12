@@ -1,4 +1,4 @@
-# Mobile D-ID Agent in less then 60 Minites FullStack!
+# Mobile D-ID Agent in less then 60 Minites Full Stack!
 
 Prerequisites:
  - Sign up for a free tier account for a D-id Agent login (NO credit card required)
