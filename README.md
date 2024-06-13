@@ -6,9 +6,6 @@ Prerequisites:
  - Use VScode to edit the files and test
  - Make sure you have a VScode "Extension" to let you launch web pages locally (Live server by Ritweck Dey)
 
-I plan to create a step-by-step video series on how to set this up and run it on YouTube
-https://www.youtube.com/@AI_by_AI_007/videos In the meantime, here are the steps:
-
 ## Initial Setup (You should complete these first):
 - Sigh up for the free tier at D-id  https://www.d-id.com/agents/
 
