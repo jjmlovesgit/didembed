@@ -572,7 +572,7 @@ footer p {
   color: white; 
   border: none;
   border-radius: 5px; /* Rounded corners */
-  width: 140px; /* Set width to 100px */
+  width: 135px; /* Set width to 100px */
   height: 30px; /* Set height to 40px */
   font-size: 18px;
   cursor: pointer;
