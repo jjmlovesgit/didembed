@@ -522,10 +522,6 @@ footer p {
   cursor: pointer;
 }
 
-#agent-iframe {
-  transform: scale(1.0); 
-  transform-origin: top left; /* Sets the origin of transformation */
-}
 
 /********************************************************************************* */
 /* iFrame */
@@ -584,10 +580,18 @@ footer p {
   align-items: center;
   justify-content: center;
   text-align: bottom;
+  display: none;      /* Initially hidden */
 }
 
+/* Positioning iframe relative to viewport for better control */
 #agent-iframe {
-  border-radius: 8px; /* Rounded corners */
+  position: fixed;
+  width: 390px;
+  height: 600px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 10px;
+  display: none;      /* Initially hidden */
 }
 
 #footer-cover {
@@ -595,7 +599,7 @@ footer p {
   bottom: 10px; /* Same as the iframe */
   right: 10px; /* Same as the iframe */
   width: 390px; /* Same as the iframe to match width */
-  height: 27px; /* Height as needed */
+  height: 26px; /* Height as needed */
   background-color: black; /* Black background color */
   overflow: hidden; /* Hide overflow to maintain the clean look */
   border-bottom-left-radius: 10px; /* Rounded bottom left corner */
@@ -621,34 +625,27 @@ footer p {
   }
 }
 
-#header-cover {
-  position: fixed;
-  top: 300px;  /* Positioned at the top of the iFrame */
-  right: 10px;
-  width: 390px;  /* Same as the iFrame to match width */
-  height: 30px;  /* Height as needed */
-  background-color: #333;  /* Dark background for contrast */
-  color: white;
-  display: flex; /* Enable flexbox */
-  justify-content: center; /* Center horizontally within the flex container */
-  align-items: center; /* Center vertically within the flex container */
-  border-top-left-radius: 10px;  /* Rounded top left corner */
-  border-top-right-radius: 10px;  /* Rounded top right corner */
-  overflow: hidden;
-  display: none;  /* Initially hidden, shown when needed */
+
+#close-agent-header-btn {
+  display: none;  /* Initially hidden */
 }
 
+@media (max-width: 600px) {
+  #agent-iframe, #header-cover {
+    width: 95%; /* Increase width for smaller screens */
+    left: 2.5%; /* Adjust left position to keep centered */
+    bottom: 5%; /* Closer to the bottom for smaller screens */
+  }
+ 
+}
 .close-button {
-  background-color: #3636f4; /* Blue background color for visibility */
+  background-color: #000000; /* Blue background color for visibility */
   color: white;
   border: none;
-  padding: 3px 16px; /* Adjust padding as needed */
+  border-top: 3px;
+  border-left: 3px;
+  padding: 3px 157px; /* Adjust padding as needed */
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
-}
-
-
-.close-button:hover {
-  background-color: #008b09; /* Green background color on hover */
 }
