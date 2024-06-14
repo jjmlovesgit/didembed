@@ -420,54 +420,64 @@
           this.style.display = 'none';
       };
     });
+
+    window.addEventListener('resize', function() {
+  var iframe = document.getElementById('agent-iframe');
+  var header = document.getElementById('header-cover');
+
+  // Dynamically calculate new bottom position for the header based on iframe position
+  var newBottom = window.innerHeight - iframe.getBoundingClientRect().top + 65;
+  header.style.bottom = newBottom + 'px';
+});
+
     </script>
      
 <!--- ************ -- Make Changes Here!............. D-id Agent Set up ************ -->
 
     <!-- Step 1: Change style="background-image: url('assets/Agent.gif') to your own gif or use a .png file for your agent button - upload to assets directory -->
     <button id="show-iframe-btn" class="open-floating-btn" style="background-image: url('assets/Agent.gif'); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: transparent; border: none; border-radius: 5px; width: 120px; height: 120px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; cursor: pointer; position: fixed; bottom: 10px; right: 10px; color: rgb(255, 255, 255); font-size: 15px; z-index: 1000; overflow: hidden;"></button>   
-  
-<!-- Step 2: Change this Agent and Key using yours from your agent creations at D-ID in the Creative Reality Studio per How to Video -->
+
+    <!-- Step 2: Change this and add your Agent and Key from your agent creation at D-ID in the Creative Reality Studio per How to Video -->
     <iframe id="agent-iframe" src="https://studio.d-id.com/agents/share?id=agt_EkAZcyRl&key=WjI5dloyeGxMVzloZFhSb01ud3hNRGc1TWpjek5EQTBNRFV6TmpNMk56TTVPVEk2U25wYWQxTldNRlZhVjJvNFFUVlpSbFl6WXpabQ==" frameborder="0" width="390" height="600" allow="microphone" style="position: fixed; border-radius: 10px; bottom: 10px; right: 10px; display: none;"></iframe>
 
-     <!-- Step 3: Change this footer text as required if you like or delete etc -->
-    <div id="footer-cover">
-      <div class="scrolling-text">Please type or use the "Mic" for questions..."</div>
+     <!-- Step 3: Change this footer text as required if you like or delete etc   <div class="scrolling-text">Please type or use the "Mic" for questions...</div> -->
+     <div id="footer-cover">
+      <button id="close-agent-header-btn" class="close-button">Close Agent</button>
     </div>
 
     <div id="header-cover">
       <button id="close-agent-header-btn" class="close-button">Close Agent</button>
     </div>
-   
 
 <!--- ************ -- No  other changes required ..... D-id Agent Set up ************ -->
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-      var showButton = document.getElementById('show-iframe-btn');
-      var headerCloseButton = document.getElementById('close-agent-header-btn'); // Close button in header
-      var iframe = document.getElementById('agent-iframe');
-      var footerCover = document.getElementById('footer-cover');
-      var headerCover = document.getElementById('header-cover');
-  
-      showButton.addEventListener('click', function() {
-          iframe.style.display = 'block';
-          footerCover.style.display = 'block';
-          headerCover.style.display = 'flex';
-          showButton.style.display = 'none'; // Hide the show button
-          headerCloseButton.style.display = 'block'; // Show the close button in the header
-      });
-  
-      var closeFunction = function() {
-          iframe.style.display = 'none';
-          footerCover.style.display = 'none';
-          headerCover.style.display = 'none';
-          showButton.style.display = 'block'; // Show the show button again
-          headerCloseButton.style.display = 'none'; // Hide the close button in the header
-      };
-  
-      headerCloseButton.addEventListener('click', closeFunction);  // Apply the same close functionality
+ document.addEventListener('DOMContentLoaded', function() {
+  var showButton = document.getElementById('show-iframe-btn');
+  var headerCloseButton = document.getElementById('close-agent-header-btn'); // Close button in header
+  var iframe = document.getElementById('agent-iframe');
+  var footerCover = document.getElementById('footer-cover');
+  var headerCover = document.getElementById('header-cover');
+
+  showButton.addEventListener('click', function() {
+    iframe.style.display = 'block';
+    footerCover.style.display = 'block';
+    headerCover.style.display = 'flex';
+    showButton.style.display = 'none'; // Hide the show button
+    headerCloseButton.style.display = 'block'; // Show the close button in the header
   });
+
+  var closeFunction = function() {
+    iframe.style.display = 'none';
+    footerCover.style.display = 'none';
+    headerCover.style.display = 'none';
+    showButton.style.display = 'block'; // Show the show button again
+    headerCloseButton.style.display = 'none'; // Hide the close button in the header
+  };
+
+  headerCloseButton.addEventListener('click', closeFunction);  // Apply the same close functionality
+});
+
   </script>
   
   </body>
