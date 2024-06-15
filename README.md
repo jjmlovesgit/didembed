@@ -16,7 +16,7 @@
     - [D-ID](https://www.d-id.com)
     - Create your agent (see the video for instructions).
     - Run a test to ensure you like your D-ID Agent.
-- **Step 3:** Edit line 441 and input you D-id Agent Details 
+- **Step 3:** Edit line 441 in index.html and input your D-id Agent Details 
     - Test with you agent replacing mine
       
 ## Troubleshooting 
