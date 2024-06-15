@@ -16,8 +16,6 @@
     - [D-ID](https://www.d-id.com)
     - Create your agent (see the video for instructions).
     - Run a test to ensure you like your D-ID Agent.
-- **Step 3:** Edit the `index.html` to include your agent. Install Ollama: [Ollama Official Docker Image](https://ollama.com/blog/ollama-is-now-available-as-an-official-docker-image). Test your Ollama installation: [Ollama GitHub](https://github.com/ollama/ollama).
-    - Refer to the video for specific lines to change.
 
 ## Troubleshooting 
 - Leave comments on the video, and I will try to help.
