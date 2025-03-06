@@ -669,14 +669,25 @@ footer p {
 }
 
 /* Shrink the Widget and Pop-up for Mobile */
+/* Center Simli Agent Pop-up for Mobile */
 @media (max-width: 600px) {
-    /* Smaller widget launcher on mobile */
-    .simli-launcher {
-        width: 40px !important;  
-        height: 40px !important;
-        bottom: 10px !important;  
-        right: 10px !important;
+    #agent-iframe {
+        width: 90vw !important;  /* Use 90% of the viewport width */
+        height: 60vh !important; /* Use 60% of the viewport height */
+        bottom: 15px !important;
+        left: 50% !important;  /* Start positioning from center */
+        transform: translateX(-50%) !important; /* Shift it left by half its width */
+        right: auto !important; /* Ensure right positioning doesn't override centering */
     }
+
+    /* Adjust close button position */
+    .close-floating-btn {
+        bottom: calc(60vh + 10px) !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+}
+
 
     /* Scale down the Simli widget inside */
     simli-widget {
@@ -689,12 +700,6 @@ footer p {
         height: 60vh !important; /* Use 60% of the viewport height */
         bottom: 15px !important;
         right: 5px !important;
-    }
-
-    /* Adjust close button for mobile */
-    .close-floating-btn {
-        bottom: calc(60vh + 10px) !important;
-        right: 15px !important;
     }
 }
 
