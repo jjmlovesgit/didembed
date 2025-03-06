@@ -692,7 +692,7 @@ footer p {
 
     /* Scale down the Simli widget inside */
     simli-widget {
-        transform: scale(0.75);
+        transform: scale(1.0);
     }
 
     /* Resize the agent chat pop-up */
