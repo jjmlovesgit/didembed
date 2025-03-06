@@ -434,9 +434,35 @@
      
 <!--- ************ -- Make Changes Here!............. D-id Agent Set up ************ -->
 
-<simli-widget token="gAAAAABnyfa3QzzjmfhD4oC48OliNmdwsWspR-QUeP9RKY4Ju0gyaL9i9pTmmfbChyjEmbomkqZwyTraM-kRUHwcE92MvZ6nnr0wK9z2FSm274OnMiBpCCEq2JAVzs5T1jmepjzatI1Q5XFYadN1SRRf_GZjlj6jKQs6PWwf_EtHQTHm7SyAQ3waFPG6r4nDLxntxtS2ZUhTfTyiDOMqajSI2gJ9F_LQOajg4fLfY0lK7GllCyQKQc3f_Trw1-bHNoYGda7DJolpMN0PEElUHHOKUm8SJ0mrf2xdVbskL27NKhrs2FhhaaJvE5PaISuTdGoUrGb4kESfTgPr0O6pOU3RTw2jZGZ1EsqL-2Y269dbXok_W7ScomGujAIgk61GQhR3h_xP71WBrtTKMPUYWk8rWgcnJ0PEQFljF5qsoH7TjstuRKPMf6W89_QEuoCkMZQi3cnyemvlvuhdYCLJB4sfQt3juvhjrH2TPANIheGv9Evsy4YhmQSNGnIkC9PzC9FNuBil-ka6Tn6hvPTi5o6p4l0WALHYFPp5lEQtqmBDfLfD45nqcXKQQSZopLHH7StRaS9JsVF8" agentid="a2d1785e-2909-447c-9649-51824bfeda45" position="right" customimage="https://github.com/jjmlovesgit/didembed/blob/main/assets/Agentgif.gif?raw=true" customtext="FAQ Help" ></simli-widget>
-<script src="https://app.simli.com/simli-widget/index.js" async type="text/javascript"></script>
+<!---<simli-widget token="gAAAAABnyfa3QzzjmfhD4oC48OliNmdwsWspR-QUeP9RKY4Ju0gyaL9i9pTmmfbChyjEmbomkqZwyTraM-kRUHwcE92MvZ6nnr0wK9z2FSm274OnMiBpCCEq2JAVzs5T1jmepjzatI1Q5XFYadN1SRRf_GZjlj6jKQs6PWwf_EtHQTHm7SyAQ3waFPG6r4nDLxntxtS2ZUhTfTyiDOMqajSI2gJ9F_LQOajg4fLfY0lK7GllCyQKQc3f_Trw1-bHNoYGda7DJolpMN0PEElUHHOKUm8SJ0mrf2xdVbskL27NKhrs2FhhaaJvE5PaISuTdGoUrGb4kESfTgPr0O6pOU3RTw2jZGZ1EsqL-2Y269dbXok_W7ScomGujAIgk61GQhR3h_xP71WBrtTKMPUYWk8rWgcnJ0PEQFljF5qsoH7TjstuRKPMf6W89_QEuoCkMZQi3cnyemvlvuhdYCLJB4sfQt3juvhjrH2TPANIheGv9Evsy4YhmQSNGnIkC9PzC9FNuBil-ka6Tn6hvPTi5o6p4l0WALHYFPp5lEQtqmBDfLfD45nqcXKQQSZopLHH7StRaS9JsVF8" agentid="a2d1785e-2909-447c-9649-51824bfeda45" position="right" customimage="https://github.com/jjmlovesgit/didembed/blob/main/assets/Agentgif.gif?raw=true" customtext="FAQ Help" ></simli-widget>
+<script src="https://app.simli.com/simli-widget/index.js" async type="text/javascript"></script> -->
     
+<!-- Container for the Simli Widget -->
+<div class="simli-container">
+    <simli-widget
+        token="gAAAAABnyfa3QzzjmfhD4oC48OliNmdwsWspR-QUeP9RKY4Ju0gyaL9i9pTmmfbChyjEmbomkqZwyTraM-kRUHwcE92MvZ6nnr0wK9z2FSm274OnMiBpCCEq2JAVzs5T1jmepjzatI1Q5XFYadN1SRRf_GZjlj6jKQs6PWwf_EtHQTHm7SyAQ3waFPG6r4nDLxntxtS2ZUhTfTyiDOMqajSI2gJ9F_LQOajg4fLfY0lK7GllCyQKQc3f_Trw1-bHNoYGda7DJolpMN0PEElUHHOKUm8SJ0mrf2xdVbskL27NKhrs2FhhaaJvE5PaISuTdGoUrGb4kESfTgPr0O6pOU3RTw2jZGZ1EsqL-2Y269dbXok_W7ScomGujAIgk61GQhR3h_xP71WBrtTKMPUYWk8rWgcnJ0PEQFljF5qsoH7TjstuRKPMf6W89_QEuoCkMZQi3cnyemvlvuhdYCLJB4sfQt3juvhjrH2TPANIheGv9Evsy4YhmQSNGnIkC9PzC9FNuBil-ka6Tn6hvPTi5o6p4l0WALHYFPp5lEQtqmBDfLfD45nqcXKQQSZopLHH7StRaS9JsVF8"
+        customimage="https://raw.githubusercontent.com/jjmlovesgit/didembed/main/assets/Agentgif.gif"
+        customtext="FAQ Help">
+    </simli-widget>
+</div>
+
+<!-- Load Simli script -->
+<script defer src="https://app.simli.com/simli-widget/index.js"></script>
+
+<!-- Styling to center and resize the widget -->
+<style>
+    .simli-container {
+        display: flex;
+        justify-content: center; /* Horizontally center */
+        align-items: center; /* Vertically center */
+        height: 100vh; /* Full screen height */
+    }
+
+    simli-widget {
+        transform: scale(0.5); /* Reduce to 50% of original size */
+        transform-origin: center; /* Ensure scaling happens from center */
+    }
+</style>
 
 <!--- ************ -- No  other changes required ..... D-id Agent Set up ************ -->
 
