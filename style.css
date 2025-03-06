@@ -693,12 +693,25 @@ footer p {
         transform: scale(.80);
     }
 
-    /* Resize the agent chat pop-up */
     #agent-iframe {
-        width: 80vw !important;  /* Use 90% of the viewport width */
-        height: 60vh !important; /* Use 60% of the viewport height */
-        bottom: 15px !important;
-        right: 15px !important;
-    }
+    width: 90vw !important;  /* Responsive width */
+    height: 90vw !important; /* Keep height equal to width for a perfect circle */
+    max-width: 300px !important;  /* Limit max size */
+    max-height: 300px !important; /* Maintain circle shape */
+    bottom: 15px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    right: auto !important;
+    border-radius: 50% !important; /* Makes the pop-up circular */
+    overflow: hidden !important; /* Ensures nothing leaks outside the circle */
 }
+
+/* Ensure the agent image inside scales properly */
+#agent-iframe img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps image fully inside without distortion */
+    border-radius: 50%; /* Ensures image remains circular */
+}
+
 
