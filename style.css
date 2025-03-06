@@ -662,6 +662,7 @@ footer p {
     align-items: center;
     cursor: pointer;
     background: white !important;
+    border: none;
     border-radius: 50% !important;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2) !important;
     overflow: hidden !important;
@@ -691,15 +692,15 @@ footer p {
 
     /* Scale down the Simli widget inside */
     simli-widget {
-        transform: scale(0.8);
+        transform: scale(0.75);
     }
 
     /* Resize the agent chat pop-up */
     #agent-iframe {
-        width: 90vw !important;  /* Use 90% of the viewport width */
+        width: 80vw !important;  /* Use 90% of the viewport width */
         height: 60vh !important; /* Use 60% of the viewport height */
         bottom: 15px !important;
-        right: 5px !important;
+        right: 15px !important;
     }
 }
 
