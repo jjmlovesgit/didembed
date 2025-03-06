@@ -667,44 +667,25 @@ footer p {
     z-index: 9999 !important;
 }
 
-/* Shrink the Widget and Pop-up for Mobile */
-/* Center Simli Agent Pop-up for Mobile */
+/* Center and shrink Simli Agent Pop-up for Mobile */
 @media (max-width: 600px) {
     #agent-iframe {
         width: 90vw !important;  /* Use 90% of the viewport width */
-        height: 60vh !important; /* Use 60% of the viewport height */
+        height: 90vw !important; /* Keep height equal to width for a perfect circle */
+        max-width: 300px !important;  /* Limit max size */
+        max-height: 300px !important; /* Maintain circle shape */
         bottom: 15px !important;
         left: 50% !important;  /* Start positioning from center */
         transform: translateX(-50%) !important; /* Shift it left by half its width */
         right: auto !important; /* Ensure right positioning doesn't override centering */
+        border-radius: 50% !important; /* Makes the pop-up circular */
+        overflow: hidden !important; /* Ensures nothing leaks outside the circle */
     }
-
-    /* Adjust close button position */
-    .close-floating-btn {
-        bottom: calc(60vh + 10px) !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-    }
-}
-
 
     /* Scale down the Simli widget inside */
     simli-widget {
-        transform: scale(.80);
+        transform: scale(0.8);
     }
-
-    #agent-iframe {
-    width: 90vw !important;  /* Responsive width */
-    height: 90vw !important; /* Keep height equal to width for a perfect circle */
-    max-width: 300px !important;  /* Limit max size */
-    max-height: 300px !important; /* Maintain circle shape */
-    bottom: 15px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    right: auto !important;
-    border-radius: 50% !important; /* Makes the pop-up circular */
-    overflow: hidden !important; /* Ensures nothing leaks outside the circle */
-}
 
     /* Ensure the agent image inside scales properly */
     #agent-iframe img {
@@ -713,5 +694,11 @@ footer p {
         object-fit: cover; /* Keeps image fully inside without distortion */
         border-radius: 50%; /* Ensures image remains circular */
     }
-}
 
+    /* Adjust close button position */
+    .close-floating-btn {
+        bottom: calc(90vw + 10px) !important; /* Adjust based on pop-up size */
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+}
