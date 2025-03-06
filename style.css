@@ -666,7 +666,7 @@ footer p {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2) !important;
     overflow: hidden !important;
     z-index: 9999 !important;
-    background-color: white !important; /* Ensure no background issues */
+    background-color: transparent !important; /* Ensure no unwanted white background */
 }
 
 /* Make sure the AI agent pop-up is circular */
@@ -682,7 +682,7 @@ footer p {
         right: auto !important;
         border-radius: 50% !important; /* Ensures pop-up remains circular */
         overflow: hidden !important;
-        background-color: transparent !important; /* Remove unwanted background */
+        background: none !important; /* Fix: Removes any square background */
     }
 
     /* Ensure the AI agent image inside scales properly */
@@ -692,7 +692,6 @@ footer p {
         object-fit: cover; /* Ensures the image fills the circular container */
         border-radius: 50%; /* Keeps the image circular */
     }
-
 
     /* Scale down the Simli widget inside */
     simli-widget {
