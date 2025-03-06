@@ -668,21 +668,23 @@ footer p {
     background-color: white !important; /* Ensure pure white background */
 }
 
-/* Make sure the AI agent pop-up is circular */
+/* Ensure the AI agent pop-up is circular */
 @media (max-width: 600px) {
     #agent-iframe {
-        width: 90vw !important;
-        height: 90vw !important;
+        width: 90vw !important;  /* Set width to 90% of the viewport */
+        height: 90vw !important; /* Match height to width for a perfect circle */
         max-width: 300px !important;
         max-height: 300px !important;
         bottom: 15px !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         right: auto !important;
-        border-radius: 50% !important; /* Ensures pop-up remains circular */
+        border-radius: 50% !important; /* Forces circular shape */
         overflow: hidden !important;
-        background-color: white !important; /* Make background pure white */
-        border: none !important; /* Remove any borders that could cause issues */
+        background: none !important; /* Ensures transparency */
+        clip-path: circle(50%) !important; /* NEW: Cuts everything outside the circle */
+        -webkit-mask-image: radial-gradient(circle, white 100%, transparent 100%) !important; /* Ensures it is clipped correctly */
+        mask-image: radial-gradient(circle, white 100%, transparent 100%) !important;
     }
 
     /* Ensure the AI agent image inside scales properly */
@@ -690,8 +692,8 @@ footer p {
         width: 100%;
         height: 100%;
         object-fit: cover; /* Ensures the image fills the circular container */
-        border-radius: 50%; /* Keeps the image circular */
-        background-color: white !important; /* Make sure image background is white */
+        border-radius: 50%; /* Ensures circular shape */
+        clip-path: circle(50%) !important; /* NEW: Ensures image is also clipped */
     }
 
     /* Scale down the Simli widget inside */
