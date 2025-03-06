@@ -650,7 +650,6 @@ footer p {
   font-size: 14px;
 }
 
-/* Styles for Simli Widget Launcher */
 /* Ensure the entire widget, including the container, is circular */
 .simli-launcher {
     position: fixed !important;
@@ -666,7 +665,7 @@ footer p {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2) !important;
     overflow: hidden !important;
     z-index: 9999 !important;
-    background-color: transparent !important; /* Ensure no unwanted white background */
+    background-color: white !important; /* Ensure pure white background */
 }
 
 /* Make sure the AI agent pop-up is circular */
@@ -682,7 +681,8 @@ footer p {
         right: auto !important;
         border-radius: 50% !important; /* Ensures pop-up remains circular */
         overflow: hidden !important;
-        background: none !important; /* Fix: Removes any square background */
+        background-color: white !important; /* Make background pure white */
+        border: none !important; /* Remove any borders that could cause issues */
     }
 
     /* Ensure the AI agent image inside scales properly */
@@ -691,6 +691,7 @@ footer p {
         height: 100%;
         object-fit: cover; /* Ensures the image fills the circular container */
         border-radius: 50%; /* Keeps the image circular */
+        background-color: white !important; /* Make sure image background is white */
     }
 
     /* Scale down the Simli widget inside */
