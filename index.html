@@ -445,29 +445,43 @@
 <!-- Load Simli script -->
 <script defer src="https://app.simli.com/simli-widget/index.js"></script>
 
-<!-- Styling to limit the container size -->
+<!-- Styling for Container and Scaling -->
 <style>
+    /* Outer container to control positioning */
     .simli-container {
         width: 200px;
         height: 200px;
         display: flex;
-        justify-content: center; /* Horizontally center widget */
-        align-items: center; /* Vertically center widget */
-        overflow: hidden; /* Ensure widget doesn't overflow */
+        justify-content: center;
+        align-items: center;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: #f0f0f0; /* Optional: Background for visibility */
-        border-radius: 10px; /* Optional: Rounded corners */
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
+        background: #f0f0f0; /* Optional background */
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        overflow: hidden; /* Ensures no overflow */
     }
 
+    /* Inner wrapper to scale down the widget */
+    .simli-inner {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0.75); /* Scale everything inside */
+        transform-origin: center;
+    }
+
+    /* Ensures widget doesn't break layout */
     simli-widget {
-        transform: scale(1.0); /* Reduce to 50% size */
-        transform-origin: right; /* Scale from center */
+        width: 100%;
+        height: 100%;
     }
 </style>
+
 
 
 <!--- ************ -- No  other changes required ..... D-id Agent Set up ************ -->
