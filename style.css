@@ -661,8 +661,6 @@ footer p {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background: white !important;
-    border: none;
     border-radius: 50% !important;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2) !important;
     overflow: hidden !important;
