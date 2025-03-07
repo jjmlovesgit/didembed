@@ -698,7 +698,7 @@ footer p {
 
     /* Scale down the Simli widget inside */
     simli-widget {
-        transform: scale(1.0);
+        transform: scale(.90);
     }
 
     /* Adjust close button position */
