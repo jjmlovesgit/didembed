@@ -1,4 +1,4 @@
-# Full Stack OpenAI Mobile D-ID "Rag" Agent Website in Less Than 30 Minutes!
+# Full Stack OpenAI Mobile "Rag" Agent Website in Less Than 30 Minutes!
 
 ## Prerequisites:
 - Sign up for a free tier account for a D-ID Agent login (NO credit card required).
